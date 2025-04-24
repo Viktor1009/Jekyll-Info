@@ -1,0 +1,15 @@
+    </body>
+    <footer>
+        <div id="footer">
+            {% for post in site.posts %}
+                <div class="footer-info">
+                    <p id="Title">
+                        {{post.title}}
+                    <p>
+                        <p class="short-info">{{post.short-info}} <a href="{{post.url}}">Read More...</a></p>
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+    </footer>
+</html>

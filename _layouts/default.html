@@ -1,0 +1,11 @@
+{% include header.html %}
+    <main>
+        {% if page.image %}
+        <div id="main-image">
+            <img src ="{{page.image}}">
+        </div>
+        {% endif %}
+
+        {{content}}
+    </main>
+{% include footer.html %}

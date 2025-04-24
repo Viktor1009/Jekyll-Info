@@ -1,0 +1,17 @@
+{% include header.html %}
+<main>
+    <div class="articles-wrapper {{ page.direction }}">
+        {% for article in page.articles %}
+            <div class="article">
+                <div class="img-div">
+                    <img src="\img/{{article.image}}.jpg" alt="Bild för {{ article.title }}">
+                </div>
+                <div class="text-div">
+                    <h2>{{ article.title }}</h2>
+                    <p>{{ article.text }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</main>
+{% include footer.html %}

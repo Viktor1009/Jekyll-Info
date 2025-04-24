@@ -1,0 +1,28 @@
+{% include header.html %}
+    <main>
+        <div id="sub-header">
+            {% for link in page.gallery-links %}
+                <a href="#{{link}}">{{link}}</a>
+            {% endfor %}
+        </div>
+        {{content}}
+        <div id="NiceSea" class="Griddy">
+            {% for i in (1..5) %}
+              {% for img in page.NiceImages %}
+                <div class="grid-cell">
+                  <img src="img/{{ img }}.jpg" alt="{{ img }}">
+                </div>
+              {% endfor %}
+            {% endfor %}
+          </div>
+          <div id="UglySea" class="Griddy">
+            {% for i in (1..5) %}
+              {% for img in page.UglyImages %}
+                <div class="grid-cell">
+                  <img src="img/{{ img }}.jpg" alt="{{ img }}">
+                </div>
+              {% endfor %}
+            {% endfor %}
+          </div>
+    </main>
+{% include footer.html %}
