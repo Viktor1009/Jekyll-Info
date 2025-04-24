@@ -4,7 +4,7 @@
         {% for article in page.articles %}
             <div class="article">
                 <div class="img-div">
-                    <img src="\img/{{article.image}}.jpg" alt="Bild för {{ article.title }}">
+                    <img src="{{site.baseurl}}/img/{{article.image}}.jpg" alt="Bild för {{ article.title }}">
                 </div>
                 <div class="text-div">
                     <h2>{{ article.title }}</h2>

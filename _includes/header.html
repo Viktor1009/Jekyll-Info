@@ -7,22 +7,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Akaya+Telivigala&family=Delicious+Handrawn&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/style.css">
 </head>
 <body>
     <header>
         <nav id="header">
             <div id="logo">
                 <a href="/#NiceSea">
-                    <img src="{{ site.url }}/img/logo.png" alt="">
+                    <img src="{{ site.baseurl }}/img/Logo.png" alt="">
                 </a>
             </div>
             <div id="header-links">
-                <a href="{{site.url}}/#NiceSea">Gallery</a>
+                <a href="{{site.baseurl}}/#NiceSea">Gallery</a>
                 {% for page in site.pages %}
                     {% if page.permalink != "/404.html" %}
 
-                    <a href="{{page.permalink}}">{{page.title}}</a>
+                    <a href="{{site.baseurl}}{{page.permalink}}">{{page.title}}</a>
                     {% endif %}
                 {% endfor %}
             </div>
